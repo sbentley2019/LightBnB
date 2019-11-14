@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/sbentley2019/LightBnB/issues"
   },
-  "homepage": "https://github.com/sbentley2019/LightBnB#readme"
+  "homepage": "https://github.com/sbentley2019/LightBnB#readme",
+  "dependencies": {
+    "pg": "^7.12.1"
+  }
 }
