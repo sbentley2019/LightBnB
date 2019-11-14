@@ -13,5 +13,5 @@ module.exports = {
   addUser,
   getAllProperties,
   addProperty,
-  getAllReservations 
+  getAllReservations
 };

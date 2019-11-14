@@ -41,11 +41,11 @@ const getAllProperties = function(options, limit = 10) {
   queryString += `
   GROUP BY properties.id
   ORDER BY cost_per_night
-  LIMIT $${queryParams.length};`; 
+  LIMIT $${queryParams.length};`;
 
   return db.query(queryString, queryParams)
-  .then(res => res.rows);
-}
+    .then(res => res.rows);
+};
 exports.getAllProperties = getAllProperties;
 
 
@@ -68,5 +68,5 @@ const addProperty = function(property) {
   `;
 
   return db.query(queryString, queryParams);
-}
+};
 exports.addProperty = addProperty;

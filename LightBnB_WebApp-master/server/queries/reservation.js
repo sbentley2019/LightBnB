@@ -19,6 +19,6 @@ const getAllReservations = function(guest_id, limit = 10) {
   ORDER BY start_date DESC
   LIMIT $2;
   `, [guest_id, limit])
-  .then(res => res.rows);
-}
+    .then(res => res.rows);
+};
 exports.getAllReservations = getAllReservations;

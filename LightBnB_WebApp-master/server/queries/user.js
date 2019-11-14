@@ -12,10 +12,10 @@ const getUserWithEmail = function(email) {
   SELECT * 
   FROM users 
   WHERE users.email ILIKE $1;`, [`${email}`])
-  .then(res => {
-    return res.rows ? res.rows[0] : null;
-  })
-}
+    .then(res => {
+      return res.rows ? res.rows[0] : null;
+    });
+};
 exports.getUserWithEmail = getUserWithEmail;
 
 /**
@@ -28,8 +28,8 @@ const getUserWithId = function(id) {
   SELECT *
   FROM users
   WHERE users.id = $1;`, [`${id}`])
-  .then(res => res.rows[0]);
-}
+    .then(res => res.rows[0]);
+};
 exports.getUserWithId = getUserWithId;
 
 
@@ -44,5 +44,5 @@ const addUser =  function(user) {
   VALUES ($1, $2, $3)
   RETURNING *;
   `, [user.name, user.email, user.password]);
-}
+};
 exports.addUser = addUser;
